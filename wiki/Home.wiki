@@ -34,9 +34,10 @@ int main()
 
     // Add an element to the document, then add some children to that element
     xml::element* date = doc.root.children.append("date");
-    date->children.append("year", "2011");
-    date->children.append("month", "12");
-    date->children.append("day", "30");
+    date->setAttribute("what", "New year's day of 2012");
+    date->children.append("year", "2012");
+    date->children.append("month", "01");
+    date->children.append("day", "01");
 
     // Now we're done editting the document, write back the changes to the file
     ofstream outFile("document.xml");
