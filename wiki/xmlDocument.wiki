@@ -30,3 +30,6 @@ Parse the document from the given stream. This function can throw a [xmlParseErr
 
 == void parse(const std::string& str) throw(parseError) ==
 Parse the document from the given string. This function can throw a [xmlParseError xml::parseError] when something goes wrong.
+
+== friend std::ostream& operator<<(std::ostream& out, const document& doc) ==
+This is a friend function, and not a member of the class. This can be used to write the entire document as xml-code to an output stream.
