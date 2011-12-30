@@ -53,3 +53,9 @@ int main()
 
 = Getting started =
 To get started using `<`xmlParser`>`, read the [GettingStarted getting started] wiki-page.
+
+= Namespace =
+Everything in this library is written inside the namespace _xml_.
+
+= Note before using =
+CDATA (issue 1) and comments (issue 2) aren't supported yet
