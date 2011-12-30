@@ -51,4 +51,4 @@ int main()
 }}}
 
 = Getting started =
-To get started using `<`xmlParser`>`, read the [gettingStarted getting started] wiki-page.
+To get started using `<`xmlParser`>`, read the [GettingStarted getting started] wiki-page.
