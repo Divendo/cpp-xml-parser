@@ -1,0 +1,32 @@
+#summary The documentation page of the xml::document class
+
+*xml::document*
+
+The xml::document class represents the entire xml-document. You've acces to alle elements in the document through the [#xml::element_root root element].
+
+<wiki:toc max_depth="2" />
+
+
+== xml::element root ==
+This is the root element of the document. See [xmlElement xml::element] for more info about the [xmlElement xml::element] class.
+
+== document(const element& root, const std::string& initEncoding) ==
+Default constructor of the document class, this initialises the [#xml::element_root root element] with _root_ and the encoding with _initEncoding_. The root element defaults to an empty element named _"root"_, the encoding defaults to _"ISO-8859-1"_.
+
+== document(const std::string& rootName, const std::string& initEncoding) ==
+Another constructor for the document class. This one initialises the root element with _rootName_ as name. The encoding is initialised with _initEncoding_, which defaults to _"ISO-8859-1"_.
+
+== std::string toString() const ==
+Convert the entire XML document to a string containing the xml code.
+
+== void setEncoding(const std::string& newEncoding) ==
+Changes the encoding attribute of the document. The encoding may not be empty, if it is it will automatically be changed to _"ISO-8859-1"_.
+
+== std::string encoding() const ==
+Get the value of the encoding attribute of the document.
+
+== void parse(std::istream& in) throw(parseError) ==
+Parse the document from the given stream. This function can throw a [xmlParseError xml::parseError] when something goes wrong.
+
+== void parse(const std::string& str) throw(parseError) ==
+Parse the document from the given string. This function can throw a [xmlParseError xml::parseError] when something goes wrong.
