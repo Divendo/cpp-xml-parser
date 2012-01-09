@@ -42,6 +42,7 @@ Reading the XML-document is really simple. Just create a [xmlDocument xml::docum
 xml::document doc;                          
 ifstream file("note.xml");
 file>>doc;
+file.close();
 }}}
 
 == Showing it's contents ==
@@ -87,6 +88,7 @@ int main()
     xml::document doc;                          
     ifstream file("note.xml");
     file>>doc;
+    file.close();
 
     // From the document, we need the root element
     // From the root element we need one of it's children
